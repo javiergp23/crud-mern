@@ -1,5 +1,8 @@
 import mongoose from "mongoose";
-const url = 'mongodb://localhost:27017/mern';
+import dotenv from 'dotenv';
+dotenv.config();
+
+const url = process.env.URL_DB;
 mongoose.connect(url);
 
 const db = mongoose.connection;
