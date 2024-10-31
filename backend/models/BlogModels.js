@@ -10,7 +10,8 @@ const blogSchema = new Schema({
         type: String,
         required: true,
     }
-   
-});
+    },
+    {collection: "blogs"}
+);
 
 export default mongoose.model("BlogModels", blogSchema);
