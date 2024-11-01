@@ -1,6 +1,5 @@
 //importamos los componentes
 import CompShowBlogs from './components/ShowBlogs';
-import CompEditBlog from './components/EditBlog';
 import logo from '/vite.svg';
 
 //importamos el router
@@ -15,7 +14,6 @@ function App() {
         <BrowserRouter>
           <Routes>
               <Route path='/' element={ <CompShowBlogs />} />
-              <Route path='/edit/:id' element={ <CompEditBlog />} />
           </Routes>
         </BrowserRouter>
         

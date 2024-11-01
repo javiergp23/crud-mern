@@ -2,12 +2,20 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 const blogSchema = new Schema({
-    title: {
+    nombre: {
         type: String,
         required: true,
     },
-    content: {
+    apellido: {
         type: String,
+        required: true,
+    },
+    correo: {
+        type: String,
+        required: true,
+    },
+    telefono: {
+        type: Number,
         required: true,
     }
     },

@@ -23,17 +23,16 @@ const CompShowBlogs = () => {
         }
     }
     
-    const store = async (title, content) => {
-        await axios.post(URI, {title, content})
+    const store = async (nombre, apellido, correo, telefono) => {
+        await axios.post(URI, {nombre, apellido, correo, telefono})
         getBlogs()
 
     }   
 
-    const update = async (id, title, content) => {
+    const update = async (id, nombre, apellido, correo, telefono) => {
 
         await axios.put(`${URI}/${id}`, {
-            title,
-            content
+            nombre, apellido, correo, telefono
         })
         getBlogs()
     }
@@ -45,15 +44,17 @@ const CompShowBlogs = () => {
 
     const handleEditClick = (blog) => {
         setSelectedBlog(blog);
-        setTitle('')
-        setContent('') // Establecer el blog seleccionado
+        setNombre('')
+        setApellido('')
+        setCorreo('')
+        setTelefono('')
     };
 
     return(
         <div className='container'>
             <div className='row'>
                 <div className='col'>
-                    <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#agregar">
+                    <button type="button" className="boton-agregar btn btn-primary " data-bs-toggle="modal" data-bs-target="#agregar">
                     Agregar nuevos datos
                     </button>
                     <div className="modal fade" id="agregar" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -62,19 +63,23 @@ const CompShowBlogs = () => {
                     <table className='table'>
                         <thead className='tableTheadBg'>
                             <tr>
-                                <th>Title</th>
-                                <th>Content</th>
-                                <th>Actions</th>
+                                <th className='elemento-table'>Nombre</th>
+                                <th className='content elemento-table'>Apellido</th>
+                                <th className='content elemento-table'>Correo</th>
+                                <th className='content elemento-table'>Telefono</th>
+                                <th className='elemento-table'>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
                             { blogs.map ( (blog, index) => (
                                 <tr key={ index }>
-                                    <td> { blog.title } </td>
-                                    <td> { blog.content } </td>
-                                    <td>
+                                    <td className='elemento-table'> { blog.nombre } </td>
+                                    <td className='elemento-table'> { blog.apellido } </td>
+                                    <td className='elemento-table'> { blog.correo } </td>
+                                    <td className='elemento-table'> { blog.telefono } </td>
+                                    <td className='elemento-table'>
                                         <button  
-                                        className='btn btn-info' 
+                                        className='btn btn-info btn-editar' 
                                         data-bs-toggle="modal" 
                                         data-bs-target="#actualizar"
                                         onClick={() => handleEditClick(blog)}
@@ -82,7 +87,7 @@ const CompShowBlogs = () => {
                                             <i className="fas fa-edit"></i>
                                                 
                                         </button>
-                                        <button onClick={ ()=>deleteBlog(blog._id) } className='btn btn-danger'><i className="fas fa-trash-alt"></i></button>
+                                        <button onClick={ ()=>deleteBlog(blog._id) } className='btn btn-danger btn-eliminar'><i className="fas fa-trash-alt"></i></button>
                                     </td>
                                 </tr>
                             )) }

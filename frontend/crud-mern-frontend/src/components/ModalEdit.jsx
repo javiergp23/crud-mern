@@ -2,22 +2,28 @@ import { useState, useEffect } from "react"
 
 function ModalEdit({update, blog}) {
     
-    const [title, setTitle] = useState('')
-    const [content, setContent] = useState('')
+    const [nombre, setNombre] = useState('')
+    const [apellido, setApellido] = useState('')
+    const [correo, setCorreo] = useState('')
+    const [telefono, setTelefono] = useState('')
  
 
     useEffect(() => {
         if (blog) {
-            setTitle(blog.title);
-            setContent(blog.content);
+            setNombre(blog.nombre);
+            setApellido(blog.apellido);
+            setCorreo(blog.correo);
+            setTelefono(blog.telefono);
         }
     }, [blog]);
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        update(blog._id,title, content); 
-        setTitle('')
-        setContent('')
+        update(blog._id,nombre, apellido, correo, telefono); 
+        setNombre('')
+        setApellido('')
+        setCorreo('')
+        setTelefono('')
         
     };
  
@@ -39,19 +45,37 @@ function ModalEdit({update, blog}) {
                 <div>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-3">
-                    <label className="form-label">Title</label>
+                    <label className="form-label">Nombre</label>
                     <input
-                        value={title}
-                        onChange={(e) => setTitle(e.target.value)}
+                        value={nombre}
+                        onChange={(e) => setNombre(e.target.value)}
                         type="text"
                         className="form-control"
                     />
                     </div>
                     <div className="mb-3">
-                    <label className="form-label">Content</label>
-                    <textarea
-                        value={content}
-                        onChange={(e) => setContent(e.target.value)}
+                    <label className="form-label">Apellido</label>
+                    <input
+                        value={apellido}
+                        onChange={(e) => setApellido(e.target.value)}
+                        type="text"
+                        className="form-control"
+                    />
+                    </div>
+                    <div className="mb-3">
+                    <label className="form-label">Correo</label>
+                    <input
+                        value={correo}
+                        onChange={(e) => setCorreo(e.target.value)}
+                        type="text"
+                        className="form-control"
+                    />
+                    </div>
+                    <div className="mb-3">
+                    <label className="form-label">Telefono</label>
+                    <input
+                        value={telefono}
+                        onChange={(e) => setTelefono(e.target.value)}
                         type="text"
                         className="form-control"
                     />
