@@ -8,7 +8,6 @@ const URI = 'http://localhost:8000/blogs'
 const CompShowBlogs = () => {
     
     const [blogs, setBlog] = useState([])
-    const [create, setCreate] = useState([])
     const [selectedBlog, setSelectedBlog] = useState(null);
  
     useEffect( ()=>{
@@ -45,7 +44,9 @@ const CompShowBlogs = () => {
     }
 
     const handleEditClick = (blog) => {
-        setSelectedBlog(blog); // Establecer el blog seleccionado
+        setSelectedBlog(blog);
+        setTitle('')
+        setContent('') // Establecer el blog seleccionado
     };
 
     return(

@@ -16,6 +16,8 @@ function ModalEdit({update, blog}) {
     const handleSubmit = (e) => {
         e.preventDefault()
         update(blog._id,title, content); 
+        setTitle('')
+        setContent('')
         
     };
  

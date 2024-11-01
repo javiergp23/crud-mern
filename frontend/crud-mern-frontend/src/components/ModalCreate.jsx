@@ -8,7 +8,8 @@ function ModalCreate({store}) {
     const handleSubmit = (e) => {
         e.preventDefault()
         store(title, content); 
-        
+        setTitle('')
+        setContent('')
     };
    
     return(
