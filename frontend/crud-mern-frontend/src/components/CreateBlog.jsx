@@ -2,6 +2,7 @@ import axios from 'axios'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
+
 const URI = 'http://localhost:8000/blogs/'
 
 const CompCreateBlog = () => {
@@ -14,6 +15,7 @@ const CompCreateBlog = () => {
         e.preventDefault()
         await axios.post(URI, {title: title, content:content})
         navigate('/')
+        
     }   
 
     return (
@@ -40,7 +42,27 @@ const CompCreateBlog = () => {
                  </div>  
                  <button type='submit' className='btn btn-primary'>Store</button>                  
            </form>
+
+
+
+
+
+
+
+
+
+
+
+
+           
         </div>
+
+
+
+
+        
+
+
     )
 }
 
