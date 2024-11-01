@@ -1,7 +1,8 @@
 //importamos los componentes
-import CompShowBlogs from './blog/ShowBlogs';
-import CompCreateBlog from './blog/CreateBlog';
-import CompEditBlog from './blog/EditBlog';
+import CompShowBlogs from './components/ShowBlogs';
+import CompCreateBlog from './components/CreateBlog';
+import CompEditBlog from './components/EditBlog';
+import logo from '/vite.svg';
 
 //importamos el router
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
