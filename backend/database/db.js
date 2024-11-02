@@ -10,4 +10,4 @@ const db = mongoose.connection;
 db.on('open', () => {console.log("Connected to MongoDB")});
 db.on('error', (err) => {console.error("Error connecting to MongoDB")})
 
-export default db;
+export default db; 

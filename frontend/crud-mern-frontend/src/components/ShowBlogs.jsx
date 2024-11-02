@@ -53,19 +53,19 @@ const CompShowBlogs = () => {
     return(
         <div className='container'>
             <div className='row'>
-                <div className='col'>
+                <div className='col contenedor'>
                     <button type="button" className="boton-agregar btn btn-primary " data-bs-toggle="modal" data-bs-target="#agregar">
                     Agregar nuevos datos
                     </button>
                     <div className="modal fade" id="agregar" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <ModalCreate store={store}/>
                     </div>
-                    <table className='table'>
-                        <thead className='tableTheadBg'>
+                    <table className='table table-bordered tabla'>
+                        <thead >
                             <tr>
                                 <th className='elemento-table'>Nombre</th>
                                 <th className='content elemento-table'>Apellido</th>
-                                <th className='content elemento-table'>Correo</th>
+                                <th className='content elemento-table'>Correo Electronico</th>
                                 <th className='content elemento-table'>Telefono</th>
                                 <th className='elemento-table'>Actions</th>
                             </tr>

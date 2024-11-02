@@ -1,7 +1,9 @@
 
 body{
-  background-color: black;
-}
+  background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+   background-repeat: no-repeat;
+   min-height: 100vh;
+  }
 
 .App-logo{
   height: 60%;
@@ -10,23 +12,30 @@ body{
 
 .boton-agregar{
   margin: 0 0 0 74%;
-  background-color: white;
-  color: black;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.685);
+  border: none;
+  background-color: #00c6fb;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.685);
 }
 
 .boton-agregar:hover{
-  background-color: rgb(8, 235, 64, 0.685);
+  background-color: rgb(6, 78, 146);
   border: none;
 }
 
-
-.table{
-  margin-top: 20px;
+.contenedor{
+  background-color: rgba(255, 255, 255, 0.308);
+  padding: 10px;
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.685);
 }
 
+.tabla{
+  background:  #ffffff;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.685);
+}
 
 .btn-eliminar{
   margin-left: 15px;
@@ -40,17 +49,17 @@ body{
 }
 
 .btn-editar{
-  background-color: rgb(119, 243, 94);
+  background-color: #00c6fb;
   border: none;
   color: white;
 }
 
 .btn-editar:hover{
-  background-color: rgb(23, 163, 58);
+  background-color: rgb(6, 78, 146);
   color: white;
   border: none;
 }
 
 .elemento-table{
-  background-color: black;
+  background-color: rgb(253, 253, 253);
 }
