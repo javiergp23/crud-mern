@@ -7,7 +7,6 @@ function ModalEdit({update, blog}) {
     const [correo, setCorreo] = useState('')
     const [telefono, setTelefono] = useState('')
  
-
     useEffect(() => {
         if (blog) {
             setNombre(blog.nombre);
