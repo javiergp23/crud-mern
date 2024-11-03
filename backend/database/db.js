@@ -2,7 +2,6 @@ import mongoose from "mongoose";
 import dotenv from 'dotenv';
 dotenv.config();
 // console.log("Database URL:", process.env.URL_DB);
- 
 const url = process.env.URL_DB;
 mongoose.connect(url);
 
