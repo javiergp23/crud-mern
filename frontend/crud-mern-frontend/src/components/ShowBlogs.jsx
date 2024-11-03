@@ -67,7 +67,7 @@ const CompShowBlogs = () => {
                                 <th className='content elemento-table'>Apellido</th>
                                 <th className='content elemento-table'>Correo Electronico</th>
                                 <th className='content elemento-table'>Telefono</th>
-                                <th className='elemento-table'>Actions</th>
+                                <th className='elemento-table'>Modificar - Eliminar</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -77,7 +77,7 @@ const CompShowBlogs = () => {
                                     <td className='elemento-table'> { blog.apellido } </td>
                                     <td className='elemento-table'> { blog.correo } </td>
                                     <td className='elemento-table'> { blog.telefono } </td>
-                                    <td className='elemento-table'>
+                                    <td className='elemento-table modificar-eliminar'>
                                         <button  
                                         className='btn btn-info btn-editar' 
                                         data-bs-toggle="modal" 

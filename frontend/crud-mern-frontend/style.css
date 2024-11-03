@@ -1,4 +1,3 @@
-
 body{
   background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
    background-repeat: no-repeat;
@@ -58,6 +57,12 @@ body{
   background-color: rgb(6, 78, 146);
   color: white;
   border: none;
+}
+.modificar-eliminar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
 }
 
 .elemento-table{
