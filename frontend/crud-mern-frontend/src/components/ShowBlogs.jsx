@@ -1,6 +1,5 @@
 import axios from 'axios'
 import {useState, useEffect} from 'react'
-//importacion de modales
 import ModalEdit from '../components/ModalEdit.jsx'
 import ModalCreate from '../components/ModalCreate.jsx'
 
