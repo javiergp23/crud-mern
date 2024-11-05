@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
+// Schema de creacion de datos para la base de datos
 const blogSchema = new Schema({
     nombre: {
         type: String,
