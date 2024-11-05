@@ -1,5 +1,8 @@
 import BlogModels from "../models/BlogModels.js";
 
+
+//Metodos del crud
+
 export const getAllBlogs = async (req, res) => {
     try{
         const blogs = await BlogModels.find();
